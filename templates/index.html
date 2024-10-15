@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>home page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  </head>
+  <body>
+
+
+    <!-- -------nav bar --------- -->
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid bg-secondary">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Dropdown
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+        </li>
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success bg-dark" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+
+    <!-- sucess window -->
+    <div class="p-3 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-3">
+   lets test the website an make some fun with sting
+</div>
+
+    <!-- form code-->
+    <form action="/analyse" method="post">{% csrf_token %} <!-- this is for post method -->
+
+    <!-- input string-->
+    <div class = "container">
+          <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Please Enter a Text </label>
+            <textarea name="text" class="form-control" id="exampleFormControlTextarea1" placeholder="eg. - xyz..,,.,.ijiohiyfv''][][hiu" rows="3"></textarea>
+          </div>
+      <div class="form-check form-switch">
+        <input name="puctuation" class="form-check-input" type="checkbox" role="switch" >
+        <label class="form-check-label" for="flexSwitchCheckDefault">remove punctuation</label>
+      </div>
+      <div class="form-check form-switch">
+        <input name="count" class="form-check-input" type="checkbox" role="switch" >
+        <label class="form-check-label" for="flexSwitchCheckDefault">count the  character</label>
+      </div>
+      <div class="form-check form-switch">
+        <input name="upper_case" class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+        <label class="form-check-label" for="flexSwitchCheckDefault">UPPERCASE</label>
+
+
+      </div>
+      <button type="submit" class="btn btn-success">Submit</button>
+
+
+    </div>
+    </form>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
+</html>
